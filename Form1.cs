@@ -79,7 +79,6 @@ namespace _3_1
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             for(int i = 1; i <= 9; i++)
             {
                 for(int j = 1; j <= 9; j++)
