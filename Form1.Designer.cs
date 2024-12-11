@@ -172,9 +172,10 @@
             // 
             // bornYear
             // 
-            this.bornYear.Location = new System.Drawing.Point(648, 659);
+            this.bornYear.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bornYear.Location = new System.Drawing.Point(648, 652);
             this.bornYear.Name = "bornYear";
-            this.bornYear.Size = new System.Drawing.Size(89, 22);
+            this.bornYear.Size = new System.Drawing.Size(89, 33);
             this.bornYear.TabIndex = 11;
             // 
             // label6
@@ -185,7 +186,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(223, 21);
             this.label6.TabIndex = 13;
-            this.label6.Text = "輸入出生民國年(1-112):";
+            this.label6.Text = "輸入出生民國年(1-113):";
             // 
             // button6
             // 
@@ -197,6 +198,7 @@
             this.button6.TabIndex = 14;
             this.button6.Text = "年齡及生肖查詢";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 

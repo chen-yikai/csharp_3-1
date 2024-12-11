@@ -99,14 +99,53 @@ namespace _3_1
                 if(question == DialogResult.Yes)
                 {
                     MessageBox.Show("Awsome!");
-                    break;
                 }
                 else
                 {
                     MessageBox.Show("Try again!");
-                    continue;
                 }
-            } while (true);
+            } while (question != DialogResult.Yes);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int input = Convert.ToInt32(bornYear.Text);
+                String[] data = { "鼠", "牛", "虎", "兔", "龍", "蛇", "馬", "羊", "猴", "雞", "狗", "豬" };
+                String res;
+                switch ((input % 12)-1)
+                {
+                    case 0: res = "鼠"; break;
+                    case 1: res = "牛"; break;
+                    case 2: res = "虎"; break;
+                    case 3: res = "兔"; break;
+                    case 4: res = "龍"; break;
+                    case 5: res = "蛇"; break;
+                    case 6: res = "馬"; break;
+                    case 7: res = "羊"; break;
+                    case 8: res = "猴"; break;
+                    case 9: res = "雞"; break;
+                    case 10: res = "狗"; break;
+                    case 11: res = "豬"; break;
+                    default: throw new Exception("Unexcepted");
+                }
+
+                res = data[(input % 12) - 1];
+
+                if (input <= 113 && input >= 1)
+                {
+                    MessageBox.Show($"您現在年齡是{113 - input}\n生肖屬{res}","查詢結果",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                else
+                {
+                    throw new Exception("Wrong input");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("錯誤的輸入","輸入錯誤",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }
