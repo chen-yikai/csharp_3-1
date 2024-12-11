@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _3_1
@@ -20,8 +13,8 @@ namespace _3_1
         private void countNum_Click(object sender, EventArgs e)
         {
             int myNumber = 27;
-            int resNum=0;
-            for(int i = myNumber; i <= 71;i++)
+            int resNum = 0;
+            for (int i = myNumber; i <= 71; i++)
             {
                 resNum += i;
             }
@@ -31,11 +24,11 @@ namespace _3_1
         private void button1_Click(object sender, EventArgs e)
         {
             string resNums = "";
-            for(int i = 4; i <= 207; i++)
+            for (int i = 4; i <= 207; i++)
             {
-                if(i % 7 == 0)
+                if (i % 7 == 0)
                 {
-                    resNums += i.ToString()+" ";
+                    resNums += i.ToString() + " ";
                 }
             }
             canDiv.Text = resNums;
@@ -67,9 +60,9 @@ namespace _3_1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            for(int i = 5; i >= 1; i--)
+            for (int i = 5; i >= 1; i--)
             {
-                for( int j = 0; j < i; j++)
+                for (int j = 0; j < i; j++)
                 {
                     increase3.Text += "*";
                 }
@@ -79,11 +72,11 @@ namespace _3_1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            for(int i = 1; i <= 9; i++)
+            for (int i = 1; i <= 9; i++)
             {
-                for(int j = 1; j <= 9; j++)
+                for (int j = 1; j <= 9; j++)
                 {
-                    box.Text += $"{j}*{i}={i*j}\t";
+                    box.Text += $"{j}*{i}={i * j}\t";
                 }
                 box.Text += "\r\n";
             }
@@ -95,8 +88,8 @@ namespace _3_1
 
             do
             {
-               question =  MessageBox.Show("Javascript better than Typescript?", "Simple Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if(question == DialogResult.Yes)
+                question = MessageBox.Show("Javascript better than Typescript?", "Simple Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (question == DialogResult.Yes)
                 {
                     MessageBox.Show("Awsome!");
                 }
@@ -112,40 +105,37 @@ namespace _3_1
             try
             {
                 int input = Convert.ToInt32(bornYear.Text);
-                String[] data = { "鼠", "牛", "虎", "兔", "龍", "蛇", "馬", "羊", "猴", "雞", "狗", "豬" };
-                String res;
-                switch ((input % 12)-1)
-                {
-                    case 0: res = "鼠"; break;
-                    case 1: res = "牛"; break;
-                    case 2: res = "虎"; break;
-                    case 3: res = "兔"; break;
-                    case 4: res = "龍"; break;
-                    case 5: res = "蛇"; break;
-                    case 6: res = "馬"; break;
-                    case 7: res = "羊"; break;
-                    case 8: res = "猴"; break;
-                    case 9: res = "雞"; break;
-                    case 10: res = "狗"; break;
-                    case 11: res = "豬"; break;
-                    default: throw new Exception("Unexcepted");
-                }
-
-                res = data[(input % 12) - 1];
-
                 if (input <= 113 && input >= 1)
                 {
-                    MessageBox.Show($"您現在年齡是{113 - input}\n生肖屬{res}","查詢結果",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    String res = "";
+                    switch (input % 12)
+                    {
+                        case 1: res = "鼠"; break;
+                        case 2: res = "牛"; break;
+                        case 3: res = "虎"; break;
+                        case 4: res = "兔"; break;
+                        case 5: res = "龍"; break;
+                        case 6: res = "蛇"; break;
+                        case 7: res = "馬"; break;
+                        case 8: res = "羊"; break;
+                        case 9: res = "猴"; break;
+                        case 10: res = "雞"; break;
+                        case 11: res = "狗"; break;
+                        case 0: res = "豬"; break;
+                    }
+                    MessageBox.Show($"您現在年齡是{113 - input}\n生肖屬{res}", "查詢結果", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     throw new Exception("Wrong input");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("錯誤的輸入","輸入錯誤",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("錯誤的輸入", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            bornYear.Text = "";
+            bornYear.Focus();
         }
     }
 }
