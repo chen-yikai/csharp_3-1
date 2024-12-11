@@ -208,6 +208,7 @@
             this.button7.TabIndex = 15;
             this.button7.Text = "進階誠實問答";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // box
             // 

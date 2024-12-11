@@ -88,5 +88,25 @@ namespace _3_1
                 box.Text += "\r\n";
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            DialogResult question;
+
+            do
+            {
+               question =  MessageBox.Show("Javascript better than Typescript?", "Simple Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(question == DialogResult.Yes)
+                {
+                    MessageBox.Show("Awsome!");
+                    break;
+                }
+                else
+                {
+                    MessageBox.Show("Try again!");
+                    continue;
+                }
+            } while (true);
+        }
     }
 }
