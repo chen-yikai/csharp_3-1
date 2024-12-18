@@ -10,35 +10,35 @@ namespace _3_1
             InitializeComponent();
         }
 
-        private void countNum_Click(object sender, EventArgs e)
+        private void countNum_Click(object sender, EventArgs e) // 計算座號~71的總和
         {
-            int myNumber = 27;
-            int resNum = 0;
-            for (int i = myNumber; i <= 71; i++)
+            int myNumber = 27; // 座號
+            int resNum = 0; // 用來遞加的變數
+            for (int i = myNumber; i <= 71; i++) // 從座號開始遞加到71
             {
-                resNum += i;
+                resNum += i; // 遞加
             }
-            myNumPluser.Text = resNum.ToString();
+            myNumPluser.Text = resNum.ToString(); // 顯示結果
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // 計算4~207中可以被7整除的數字
         {
-            string resNums = "";
-            for (int i = 4; i <= 207; i++)
+            string resNums = ""; // 用來存放結果的字串
+            for (int i = 4; i <= 207; i++) // 從4開始遞增到207
             {
-                if (i % 7 == 0)
+                if (i % 7 == 0) // 如果可以被7整除
                 {
-                    resNums += i.ToString() + " ";
+                    resNums += i.ToString() + " "; // 加入結果字串
                 }
             }
-            canDiv.Text = resNums;
+            canDiv.Text = resNums; // 顯示結果
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // 5*5的星號
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++) // 5行
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < 5; j++) 
                 {
                     increase1.Text += "*";
                 }
