@@ -38,15 +38,15 @@ namespace _3_1
         {
             for (int i = 0; i < 5; i++) // 5行
             {
-                for (int j = 0; j < 5; j++) 
+                for (int j = 0; j < 5; j++) // 5列
                 {
-                    increase1.Text += "*";
+                    increase1.Text += "*"; // 加入星號
                 }
-                increase1.Text += "\r\n";
+                increase1.Text += "\r\n"; // 換行
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) 
         {
             for (int i = 1; i <= 5; i++)
             {
